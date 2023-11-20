@@ -1,0 +1,1538 @@
+{
+	"info": {
+		"_postman_id": "533e74d2-2cef-495b-85ed-ce6672214cb6",
+		"name": "ProductStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30673921"
+	},
+	"item": [
+		{
+			"name": "ProductStore",
+			"item": [
+				{
+					"name": "Add a product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()",
+									"pm.globals.set(\"product_id\", data.id);",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"curry\",\n    \"price\": 500,\n    \"type\": \"Perecedero\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"curry\",\n    \"price\": 500,\n    \"type\": \"Perecedero\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77-SvREGl/tCTsftA8ks60oVpxIZWU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Nov 2023 13:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"curry\",\n    \"price\": 500,\n    \"type\": \"Perecedero\",\n    \"id\": \"a34ab6cc-1d8b-41cb-b2f8-c69539faeb34\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json()",
+									"pm.globals.set(\"store_id\", data.id);",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"curry\",\n    \"city\": \"BOG\",\n    \"address\": \"Perecedero\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/stores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"curry\",\n    \"city\": 500,\n    \"address\": \"Perecedero\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/stores",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stores"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77-SvREGl/tCTsftA8ks60oVpxIZWU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Nov 2023 13:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"curry\",\n    \"city\": \"BOG\",\n    \"address\": \"Perecedero\",\n    \"id\": \"a34ab6cc-1d8b-41cb-b2f8-c69539faeb34\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add store to product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add store to product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "299"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12b-6DlENsHjehBnN5P5EUmwObPW/R0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 17:48:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"4ee1bdb3-4af6-4266-b4b0-fb2761852de6\",\n    \"name\": \"curry\",\n    \"price\": 500,\n    \"type\": \"Perecedero\",\n    \"stores\": [\n        {\n            \"id\": \"c5aafe96-5eb5-49b7-9ee8-9d4769c18dd9\",\n            \"name\": \"curry\",\n            \"city\": \"BOG\",\n            \"address\": \"Perecedero\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add an invalid store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The store with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/3c23ba0f-4efa-4735-84cd-93c9ca6fc79f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"3c23ba0f-4efa-4735-84cd-93c9ca6fc79f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add an invalid store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/3c23ba0f-4efa-4735-84cd-93c9ca6fc79f",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"3c23ba0f-4efa-4735-84cd-93c9ca6fc79f"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-c3CrPze6Ck+KRy7oRDIsmE43A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 17:55:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The store with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add store with invalid product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The culture with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/3c23ba0f-4efa-4735-84cd-93c9ca6fc79f/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"3c23ba0f-4efa-4735-84cd-93c9ca6fc79f",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add store with invalid product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/3c23ba0f-4efa-4735-84cd-93c9ca6fc79f/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"3c23ba0f-4efa-4735-84cd-93c9ca6fc79f",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-c3CrPze6Ck+KRy7oRDIsmE43A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 17:57:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The product with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get store from product not associate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/3c23ba0f-4efa-4735-84cd-93c9ca6fc79f/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"3c23ba0f-4efa-4735-84cd-93c9ca6fc79f",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get store from product not associate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-QGx9OrtpzRq/ayrO95CcpczPCSU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:02:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The product with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get store from product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get store from product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-AUsTgKMalRvz56UL5BtjonqnjRw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:10:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"c5aafe96-5eb5-49b7-9ee8-9d4769c18dd9\",\n    \"name\": \"curry\",\n    \"city\": \"BOG\",\n    \"address\": \"Perecedero\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all stores from product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get store from product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-AUsTgKMalRvz56UL5BtjonqnjRw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 18:10:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"c5aafe96-5eb5-49b7-9ee8-9d4769c18dd9\",\n        \"name\": \"curry\",\n        \"city\": \"BOG\",\n        \"address\": \"Perecedero\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get all stores from invalid product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The culture with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/3c23ba0f-4efa-4735-84cd-93c9da6fc79f/stores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"3c23ba0f-4efa-4735-84cd-93c9da6fc79f",
+								"stores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all stores from invalid product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/3c23ba0f-4efa-4735-84cd-93c9da6fc79f/stores",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"3c23ba0f-4efa-4735-84cd-93c9da6fc79f",
+										"stores"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-wy1CDyNwVYvRgwzw9BPhLgMK1Rk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 20:26:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The product with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get store with invalid product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The store with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/312d6224-ed0a-487b-8385-336690984a5a/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"312d6224-ed0a-487b-8385-336690984a5a",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get store with invalid product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/312d6224-ed0a-487b-8385-336690984a5a/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"312d6224-ed0a-487b-8385-336690984a5a",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-c3CrPze6Ck+KRy7oRDIsmE43A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 20:11:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The product with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get store with invalid store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The museum with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/312d6224-ed0a-487b-8385-336690984a5a",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"312d6224-ed0a-487b-8385-336690984a5a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get store with invalid store",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/312d6224-ed0a-487b-8385-336690984a5a",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"312d6224-ed0a-487b-8385-336690984a5a"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-c3CrPze6Ck+KRy7oRDIsmE43A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 20:17:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The store with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update store in product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The culture with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Panamá\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update store in product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"955bfc28-4d2d-4b17-9e99-7c7b73ba0e3a\",\n    \"name\": \"Japanese\",\n    \"description\": \"spicy ingredient\",\n    \"stores\": [\n        {\n            \"name\": \"Ghee Indian Kitchen\",\n            \"city\": \"Miami\",\n            \"michelinStars\": 2,\n            \"michelinAchievementDate\": \"2011-12-23\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9d-1nhvLeSGwoMcsy6XamRtB/gHUpo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 22:12:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"4ee1bdb3-4af6-4266-b4b0-fb2761852de6\",\n    \"name\": \"curry\",\n    \"price\": 500,\n    \"type\": \"Perecedero\",\n    \"stores\": [\n        {\n            \"name\": \"Panamá\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update store with invalid product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The culture with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"eea92e01-86f9-453a-b608-9494d54a474a\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/products/6ef0753a-f9fe-4fb9-86d8-25903fe62ca1/stores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"6ef0753a-f9fe-4fb9-86d8-25903fe62ca1",
+								"stores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update store with invalid product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"id\": \"eea92e01-86f9-453a-b608-9494d54a474a\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/6ef0753a-f9fe-4fb9-86d8-25903fe62ca1/stores",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"6ef0753a-f9fe-4fb9-86d8-25903fe62ca1",
+										"stores"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-wy1CDyNwVYvRgwzw9BPhLgMK1Rk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 22:13:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The product with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete store to product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The culture with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete store to product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 21:49:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Delete store doesnt exist store in product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The store with the given id was not found\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/35c82c81-1db9-460e-afd3-b0de6e6dbe73",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"35c82c81-1db9-460e-afd3-b0de6e6dbe73"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete store doesnt exist in product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/35c82c81-1db9-460e-afd3-b0de6e6dbe73",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"35c82c81-1db9-460e-afd3-b0de6e6dbe73"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-c3CrPze6Ck+KRy7oRDIsmE43A0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 21:50:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The store with the given id was not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete store doesnt exist to product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 412\", function () {",
+									"   pm.response.to.have.status(412);",
+									"});",
+									"",
+									"pm.test(\"Get expected error message\", function () {",
+									"   var data = pm.response.json();",
+									"   pm.expect(data.message).to.eql(\"The store with the given id is not associated to the culture\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products",
+								"{{product_id}}",
+								"stores",
+								"{{store_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete store doesnt exist to product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/products/{{product_id}}/stores/{{store_id}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"{{product_id}}",
+										"stores",
+										"{{store_id}}"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-QGx9OrtpzRq/ayrO95CcpczPCSU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Nov 2023 21:56:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 412,\n    \"message\": \"The store with the given id is not associated to the culture\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
